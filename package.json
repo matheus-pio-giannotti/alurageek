@@ -1,0 +1,20 @@
+{
+  "nome": "alurageek",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "scripts/backend/server.js",
+  "scripts": {
+    "start": "node scripts/backend/server.js",
+    "dev": "nodemon scripts/backend/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.7"
+  }
+}

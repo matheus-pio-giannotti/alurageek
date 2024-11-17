@@ -1,0 +1,390 @@
+/* Resetar básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Cabeçalho */
+.cabecalho {
+    background: #222;
+    height: 5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.2rem;
+}
+
+.cabecalho_titulo {
+    color: #fefefe;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+}
+
+.cabecalho_titulo_extensao {
+    color: #00bd84;
+}
+
+.cabecalho_imagem {
+    color: #7da2d4;
+    border: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    width: 36px;
+    height: 36px;
+}
+
+/* Principal */
+.principal {
+    background: #fefefe;
+    padding: 4rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/* Meus Produtos */
+.principal_meusprodutos {
+    width: 455px;
+    height: 561px;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.principal_meusprodutos_titulo {
+    color: #222;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.principal_meusprodutos_estoque {
+    color: #222;
+    border-left: 4px;
+    border-left-style: solid;
+    border-bottom: 4px;
+    border-bottom-style: solid;
+    padding: 0px 07px 11px 10px;
+    width: 477px;
+    height: 575px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    gap: 0.5rem;
+    overflow-y: scroll;
+}
+
+.principal_meusprodutos_estoque_vazio {
+    width: 434px;
+    height: 565px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.principal_meusprodutos_estoque_vazio_imagem {
+    width: 32px;
+    height: 32px;
+}
+
+.principal_meusprodutos_estoque_vazio_titulo {
+    color: #222;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 500;
+    font-size: medium;
+}
+
+.principal_meusprodutos_estoque_carregamento {
+    color: #7da2d4;
+    font-family: "Share Tech Mono", serif;
+    font-style: italic;
+    font-size: medium;
+    font-weight: 500;
+    width: 434px;
+    display: flex;
+    justify-content: center;
+}
+
+.principal_meusprodutos_estoque_produtos {
+    background: #7da2d4;
+    border-radius: 5px;
+    width: 435px;
+    height: 89px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.principal_meusprodutos_estoque_produtos_imagem {
+    border-radius: 5px;
+    width: 90px;
+    height: 75px;
+}
+
+.principal_meusprodutos_estoque_produtos_informacao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.principal_meusprodutos_estoque_produtos_informacao_nome {
+    color: #222;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+    font-size: medium;
+    width: 316px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.principal_meusprodutos_estoque_produtos_informacao_preco {
+    color: #fefefe;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+    font-size: medium;
+}
+
+
+.principal_meusprodutos_estoque_produtos_informacao_excluir {
+    background-image: url('../assets/images/lixeira.png');
+    background-repeat: no-repeat;
+    background-color: #7da2d4;
+    background-position: center;
+    border: none;
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Adicionar Produto */
+.principal_adicionarproduto {
+    width: 400px;
+    height: 324px;
+    display: flex;
+    flex-direction: column;
+    gap: 1.8rem;
+}
+
+.principal_adicionarproduto_titulo {
+    color: #00bd84;
+    font-family: "Share Tech Mono", serif;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_preco,
+.principal_adicionarproduto_formularioadicionarproduto_nome {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_preco_rotulo,
+.principal_adicionarproduto_formularioadicionarproduto_nome_rotulo {
+    color: #222;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_preco_entrada,
+.principal_adicionarproduto_formularioadicionarproduto_nome_entrada {
+    outline: none;
+    color: #222;
+    border: 2px;
+    border-style: solid;
+    border-radius: 50px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0.4rem 0.5rem;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_imagem {
+    padding: 0.5rem 0;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_imagem_rotulo {
+    background: #222;
+    border-radius: 50px;
+    color: #fefefe;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_imagem_rotulo:hover {
+    background: #1b1b1b;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_imagem_rotulo:active {
+    background: #2b2b2b;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_imagem_entrada {
+    display: none;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_adicionarproduto {
+    display: flex;
+    justify-content: center;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_adicionarproduto_botao {
+    background: #00bd84;
+    border: none;
+    border-radius: 50px;
+    color: #fefefe;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: medium;
+    width: 175px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_adicionarproduto_botao:hover {
+    background: #13aa7d;
+}
+
+.principal_adicionarproduto_formularioadicionarproduto_adicionarproduto_botao:active {
+    background: #00d58d;
+}
+
+/* Rodapé */
+.rodape {
+    background: #222;
+    height:8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rodape_contato {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.rodape_contato_titulo {
+    color: #fefefe;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+}
+
+.rodape_contato_links {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.rodape_contato_links_github,
+.rodape_contato_links_linkedin {
+    border: 2px;
+    border-color: #7da2d4;
+    border-style: solid;
+    border-radius: 50px;
+    padding: 5px 6px 5px 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.4rem;
+}
+
+.rodape_contato_links_github_imagem,
+.rodape_contato_links_linkedin_imagem {
+    width: 25px;
+    height: 25px;
+}
+
+/* Bandeira de notificação */
+.notificacao {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 10px 15px;
+    background-color: #4caf50;
+    color: #fefefe;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    opacity: 0;
+    animation: slide-in 0.5s forwards, fade-out 0.5s ease 2.5s forwards;
+}
+
+.notificacao.erro {
+    background-color: #ff4d4f;
+}
+
+@keyframes slide-in {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade-out {
+    to {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+}
+
+/* Estilos para telas com largura máxima de 1200px (desktop) */
+@media (max-width: 1200px) {
+    
+    .principal {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+        gap: 2rem;
+    }
+}
+
+/* Estilos para telas com largura máxima de 768px (tablets e smartphones em modo paisagem) */
+@media (max-width: 768px) {
+    
+    .principal {
+        gap: 1.5rem;
+    }
+}
+
+/* Estilos para telas pequenas, como smartphones */
+@media (max-width: 480px) {
+
+    .principal_meusprodutos_estoque {
+        width: 100%;
+        max-width: 430px;
+    }
+
+    .principal {
+        padding: 1rem;
+        gap: 1rem;
+    }
+}

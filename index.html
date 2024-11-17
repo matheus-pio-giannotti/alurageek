@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta nome="viewport" content="width=device-width, initial-scale=1.0">
+        <!-- Define o título da página que aparece na aba do navegador -->
+        <title>AluraGeek</title>
+        <!-- Define o ícone (favicon) que aparece na aba do navegador ao lado do título -->
+        <link rel="shortcut icon" href="./assets/images/alurageek.png" type="image/x-icon">
+        <!-- Importa duas fontes do Google:
+        - Roboto: Fonte versátil com várias espessuras e estilos (normal e itálico).
+        - Share Tech Mono: Fonte monoespaçada para um estilo mais técnico.
+        -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Share+Tech+Mono&display=swap" rel="stylesheet">
+        <!-- Vincula o arquivo CSS que contém a estilização personalizada da página -->
+        <link rel="stylesheet" href="./styles/style.css">
+        <!-- Importa o script do back-end:
+        - 'defer' garante que o script será executado somente após o carregamento completo do HTML.
+        -->
+        <script src="./scripts/backend/server.js" defer></script>
+        <!-- Importa o script do front-end:
+        - 'type="module"' indica que o script é um módulo ES6, permitindo o uso de `import` e `export`.
+        -->
+        <script type="module" src="./scripts/frontend/main.js" defer></script>
+    </head>
+
+    <body>
+
+        <!-- Cabeçalho -->
+        <header class="cabecalho">
+            <h1 class="cabecalho_titulo">Alura</h1>
+            <img class="cabecalho_imagem" src="./assets/images/alurageek.png" alt="AluraGeek">
+            <h1 class="cabecalho_titulo"><span class="cabecalho_titulo_extensao">Geek</span></h1>
+        </header>
+
+        <!-- Principal -->
+        <main class="principal">
+
+            <!-- Meus Produtos -->
+            <section class="principal_meusprodutos">
+                <h1 class="principal_meusprodutos_titulo">Meus Produtos</h1>
+                <!-- Cria um espaço para a exibição de Produtos Adicionados -->
+                <section class="principal_meusprodutos_estoque" id="estoque"></section>
+            </section>
+
+            <!-- Adicionar Produto -->
+            <section class="principal_adicionarproduto">
+                <h1 class="principal_adicionarproduto_titulo">Adicionar Produto</h1>
+                <!-- Formulário para Adição de Produtos -->
+                <form class="principal_adicionarproduto_formularioadicionarproduto" id="formularioproduto" action="/api/produtos" method="POST" enctype="multipart/form-data">
+                    <!-- Adiciona o Nome do Produto -->
+                    <div class="principal_adicionarproduto_formularioadicionarproduto_nome">
+                        <label class="principal_adicionarproduto_formularioadicionarproduto_nome_rotulo" for="nome">Nome do Produto:</label>
+                        <input class="principal_adicionarproduto_formularioadicionarproduto_nome_entrada" type="text" maxlength="100" id="nome" name="nome" placeholder="Carrinho do desenvolvedor Front-End">
+                    </div>
+                    <!-- Adiciona o Preço do Produto -->
+                    <div class="principal_adicionarproduto_formularioadicionarproduto_preco">
+                        <label class="principal_adicionarproduto_formularioadicionarproduto_preco_rotulo" for="preco">Preço do Produto (R$):</label>
+                        <input class="principal_adicionarproduto_formularioadicionarproduto_preco_entrada" type="number" id="preco" name="preco" step="0.01" placeholder="100,00">
+                    </div>
+                    <!-- Adiciona a Imagem do Produto -->
+                    <div class="principal_adicionarproduto_formularioadicionarproduto_imagem">
+                        <label class="principal_adicionarproduto_formularioadicionarproduto_imagem_rotulo" for="imagem">Imagem do Produto</label>
+                        <input class="principal_adicionarproduto_formularioadicionarproduto_imagem_entrada" type="file" id="imagem" name="imagem" accept="image/*">
+                    </div>
+                    <!-- Botão para envio do Formulário -->
+                    <div class="principal_adicionarproduto_formularioadicionarproduto_adicionarproduto">
+                        <button class="principal_adicionarproduto_formularioadicionarproduto_adicionarproduto_botao" type="submit" aria-label="Adicionar Produto">Adicionar Produto</button>
+                    </div>
+                </form>
+            </section>
+
+        </main>
+
+        <!-- Rodapé -->
+        <footer class="rodape">
+
+            <!-- Contato -->
+            <section class="rodape_contato">
+                <h1 class="rodape_contato_titulo">Contato</h1>
+                <!-- Adiciona Links para Contato -->
+                <div class="rodape_contato_links">
+                    <a class="rodape_contato_links_linkedin" href="https://br.linkedin.com/"><img class="rodape_contato_links_linkedin_imagem" src="./assets/images/linkedin.png" alt="LinkedIn"></a>
+                    <a class="rodape_contato_links_github" href="https://github.com/"><img class="rodape_contato_links_github_imagem" src="./assets/images/github.png" alt="GitHub"></a>
+                </div>
+            </section>
+
+        </footer>
+
+    </body>
+
+</html>
